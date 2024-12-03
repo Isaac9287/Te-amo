@@ -1,0 +1,149 @@
+html, body {
+    height: 100%;            
+    margin: 0;
+    padding: 0;
+    overflow: hidden;        
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    width: 100%;             
+    height: 100%;            
+    max-width: 100vw;        
+    max-height: 100vh;      
+    overflow: hidden;        
+    background-color: #f0f0f0;
+    display: flex;          
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;  
+    padding: 40px;           
+}
+
+h1, p {
+    margin: 0;
+    font-size: 3rem;         
+    word-wrap: break-word;  
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 20px;  
+    }
+
+    h1, p {
+        font-size: 1.8rem;  
+    }
+
+    button {
+        font-size: 14px;  
+    }
+
+    .mensaje {
+        font-size: 1.5rem;  
+    }
+
+    .mensaje p {
+        font-size: 1.8rem;  
+    }
+
+    .mensaje span {
+        font-size: 2.5rem;  
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contenedor {
+        padding: 30px;  
+    }
+
+    h1, p {
+        font-size: 2rem;  
+    }
+
+    button {
+        font-size: 16px; 
+    }
+
+    .mensaje {
+        font-size: 2rem;  
+    }
+
+    .mensaje p {
+        font-size: 2.5rem; 
+    }
+
+    .mensaje span {
+        font-size: 3rem;  
+    }
+}
+
+.opciones {
+    display: flex;          
+    justify-content: center; 
+    margin-top: 30px;        
+}
+
+button {
+    padding: 30px 60px;  
+    font-size: 24px;     
+    margin: 0 20px;      
+    border: none;
+    border-radius: 10px;  
+    cursor: pointer;
+}
+
+.si {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.no {
+    background-color: #f44336; 
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8; 
+}
+
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.mensaje {
+    position: absolute;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;       
+    justify-content: center; 
+    align-items: center;    
+    font-size: 2.5rem; 
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    animation: latido 1s infinite; 
+    z-index: 9999; 
+}
+
+.mensaje p {
+    margin: 0;
+    font-size: 3rem; 
+}
+
+.mensaje span {
+    font-size: 4rem; 
+    display: block;
+    animation: latido 1s infinite; 
+}
